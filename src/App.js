@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import Header from './components/containers/header';
+import Index from './components/index.js';
 import './App.css';
+import isDarkThemeSelected from './theme/properties';
 
-function App() {
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { createBrowserHistory }  from 'history';
+import { syncHistoryWithStore } from 'react-router-redux';
+import store from './redux/reducers/index';
+
+
+function App({ actions }) {
+  const history = syncHistoryWithStore(createBrowserHistory(), store);
+  document.body.style.overflowX = "hidden";
+  fetch("https://restcountries.eu/rest/v2/all")
+    .then(response => response.json())
+    .then(countries => {
+      actions.setOrUpdateList(countries)
+    });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+      <Header />
+        <Route exact path="">
+          <Index />
+        </Route>
+    </Router>
   );
 }
 

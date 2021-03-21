@@ -1,0 +1,106 @@
+.back-button-container{
+    padding: 50px 2% 25px 2%;
+}
+.country-info-container{
+    height: 90vh;
+    padding-left: 2%;
+}
+.back-button{
+    padding: 10px 30px;
+    color: black;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+.back-button:hover{
+    text-decoration: none;
+    color:black;
+}
+.content-container{
+    margin: 0 4.5% 0 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* FLAG SIDE */
+.country-info-flag-container{
+}
+.flag-country-info{
+    width: 83%;
+    height: 350px;
+}
+
+.country-info-name{
+    font-size: 1.7em;
+    font-weight: 800;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* TEXT SIDE */
+.country-info-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.country-info-property{
+    font-weight: 800;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.country-info-section-properties-1 > p{
+    margin: 8px 0;
+}
+.country-info-section-properties-2 > p{
+    margin: 8px 0;
+}
+
+/* BORDER COUNTRIES PART */
+.country-info-border-countries{
+    padding: 50px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.country-info-border-country-link{
+    padding: 5px 15px;
+    color: black;
+    border: 2px solid hsl(0, 0%, 90%);
+    margin: 0px 5px;
+    margin-bottom: 5px;
+    font-size: .9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.country-info-border-countries-content{
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.country-info-border-country-link:hover{
+    color: black;
+    text-decoration: none;
+}
+.country-info-space-border-countries{
+    display: none;
+}
+@media only screen and (max-width: 700px){
+    .content-container{
+        grid-template-columns: 1fr;
+    }
+    .country-info-flag-container{
+        height: 250px;
+        position: relative;
+    }
+    .flag-country-info{
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        height: 250px;
+
+    }
+    .country-info-info{
+        grid-template-columns: 1fr;
+    }
+    .country-info-border-countries{
+        grid-template-columns: 1fr;
+    }
+    .country-info-space-border-countries{
+        display: block;
+    }
+}
