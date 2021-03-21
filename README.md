@@ -2,6 +2,8 @@
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
 
+# Live site URL: 
+ https://rest-countries-api-coral.vercel.app/
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
