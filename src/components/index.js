@@ -9,7 +9,7 @@ import {
   } from "react-router-dom";
 
 export default function Index(){
-    let { path, url } = useRouteMatch();
+    let { path } = useRouteMatch();
     return (
         <Switch>
             <Route exact path={path}>

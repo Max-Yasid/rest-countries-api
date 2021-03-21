@@ -3,11 +3,7 @@ import Country from './containers/Country';
 import './countries.css';
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link,
-  useParams
 } from "react-router-dom";
 
 

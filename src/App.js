@@ -1,13 +1,11 @@
 import Header from './components/containers/header';
 import Index from './components/index.js';
 import './App.css';
-import isDarkThemeSelected from './theme/properties';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { createBrowserHistory }  from 'history';
 import { syncHistoryWithStore } from 'react-router-redux';
 import store from './redux/reducers/index';
-
 
 function App({ actions }) {
   const history = syncHistoryWithStore(createBrowserHistory(), store);
@@ -20,8 +18,7 @@ function App({ actions }) {
   return (
     <Router history={history}>
       <Header />
-        <Route exact path="">
-          <Index />
+        <Route exact path="" component={Index}>
         </Route>
     </Router>
   );
